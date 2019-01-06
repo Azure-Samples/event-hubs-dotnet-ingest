@@ -22,7 +22,7 @@ namespace SendSampleData
         {
             var eventHubClient = EventHubClient.CreateFromConnectionString(connectionString, eventHubName);
             int counter = 0;
-            while (true)
+            for (int i = 0; i < 100; i++)
             {
                 int recordsPerMessage = 3;
                 try
