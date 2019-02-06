@@ -36,9 +36,9 @@ namespace SendSampleData
                     EventData eventData = new EventData(Encoding.UTF8.GetBytes(recordString));
                     Console.WriteLine($"sending message {counter}");
                     // Optional "dynamic routing" properties for the database, table, and mapping you created. 
-                    //eventData.Properties.Add("Database", "TestDatabase");
-                    //eventData.Properties.Add("Table", "TestTable");
-                    //eventData.Properties.Add("IngestionMappingReference", "TestMapping");
+                    // eventData.Properties.Add("Table", "TestTable");
+                    // eventData.Properties.Add("IngestionMappingReference", "TestMapping");
+                    // eventData.Properties.Add("Format", "json");
                     eventHubClient.Send(eventData);
                 }
                 catch (Exception exception)
