@@ -16,10 +16,10 @@ namespace SendSampleData
 
         public static async Task Main(string[] args)
         {
-            await EventHubIngestion();
+            await EventHubIngestionAsync();
         }
 
-        public static async Task EventHubIngestion()
+        public static async Task EventHubIngestionAsync()
         {
             await using (var producerClient = new EventHubProducerClient(connectionString, eventHubName))
             {
