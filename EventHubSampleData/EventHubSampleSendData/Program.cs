@@ -11,7 +11,6 @@ namespace SendSampleData
     class Program
     {
         const string eventHubName = "test-hub";
-        // Copy the connection string ("Connection string-primary key") from your Event Hub namespace.
         const string connectionString = @"<YourConnectionString>";
 
         public static async Task Main(string[] args)
@@ -29,10 +28,10 @@ namespace SendSampleData
                     int recordsPerMessage = 3;
                     try
                     {
-                        List<string> records = Enumerable
+                        var records = Enumerable
                             .Range(0, recordsPerMessage)
-                            .Select(recordNumber => $"{{\"timeStamp\": \"{DateTime.UtcNow.AddSeconds(100 * counter)}\", \"name\": \"{$"name {counter}"}\", \"metric\": {counter + recordNumber}, \"source\": \"EventHubMessage\"}}")
-                            .ToList();
+                            .Select(recordNumber => $"{{\"timeStamp\": \"{DateTime.UtcNow.AddSeconds(100 * counter)}\", \"name\": \"{$"name {counter}"}\", \"metric\": {counter + recordNumber}, \"source\": \"EventHubMessage\"}}");
+                        
                         string recordString = string.Join(Environment.NewLine, records);
 
                         EventData eventData = new EventData(Encoding.UTF8.GetBytes(recordString));
@@ -55,8 +54,6 @@ namespace SendSampleData
                     }
 
                     counter += recordsPerMessage;
-
-                    await Task.Delay(10000);
                 }
             }
         }
