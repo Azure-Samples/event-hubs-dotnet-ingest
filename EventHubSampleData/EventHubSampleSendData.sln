@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2003
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendSampleData", "EventHub2\SendSampleData.csproj", "{39C6D8A8-E6E7-4140-9DF3-B1F904884C4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SendSampleData", "EventHubSampleSendData\SendSampleData.csproj", "{39C6D8A8-E6E7-4140-9DF3-B1F904884C4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +20,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2437AC5E-AA35-4674-B183-7399EF3941AC}
+		SolutionGuid = {5EDE07DF-1DBC-4E89-B4B0-D95F6F4EB2D7}
 	EndGlobalSection
 EndGlobal
